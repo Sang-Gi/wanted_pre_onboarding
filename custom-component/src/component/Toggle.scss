@@ -2,11 +2,12 @@ $gray: #a8a8a8;
 
 // 전체 박스
 .toggle {
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 70px;
     // background-color: $gray;
 
     // 오리지널 체크박스
@@ -52,6 +53,10 @@ $gray: #a8a8a8;
     
     .toggleLabel:active .toggleBall {
         width: 60px;
+    }
+
+    .toggleSpan {
+        margin-top: 40px;
     }
 }
     

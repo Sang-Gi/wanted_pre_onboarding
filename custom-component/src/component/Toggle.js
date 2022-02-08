@@ -23,6 +23,11 @@ const Toggle = (props) => {
       >
         <span className={`toggleBall`}/>
       </label>
+      <span 
+        className='toggleSpan'
+        onClick={isChecked}>
+          Toggle Switch {isChecked ? 'ON' : 'OFF'} </span>
+          {/* checked 여부에 따라 ON, OFF */}
     </div>
   );
 };
