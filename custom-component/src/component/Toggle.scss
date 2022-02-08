@@ -1,0 +1,57 @@
+$gray: #a8a8a8;
+
+// 전체 박스
+.toggle {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: $gray;
+
+    // 오리지널 체크박스
+    .toggleCheckbox {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+
+        /* &:checked + .toggleLabel .toggleBall {
+            transform: translateX(24px);
+        } */
+    }
+
+    // 라벨 
+    .toggleLabel {
+        cursor: pointer;
+        width: 100px;
+        height: 50px;
+        background: $gray;
+        border-radius: 100px;
+        position: relative;
+        transition: background-color .2s;
+    }
+
+
+    .toggleLabel .toggleBall {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 45px;
+        height: 45px;
+        border-radius: 45px;
+        transition: 0.2s;
+        background: #fff;
+        box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+    }
+
+    // 체크시 trans
+    .toggleCheckbox:checked + .toggleLabel .toggleBall {
+        left: calc(100% - 2px);
+        transform: translateX(-100%);
+    }
+    
+    .toggleLabel:active .toggleBall {
+        width: 60px;
+    }
+}
+    
