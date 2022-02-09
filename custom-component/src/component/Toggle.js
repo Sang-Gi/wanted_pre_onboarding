@@ -1,5 +1,5 @@
 import React from "react";
-import './Toggle.scss'
+import './css/Toggle.scss'
 
 const Toggle = (props) => {
   const { isChecked, handleToggle } = props;
@@ -25,7 +25,7 @@ const Toggle = (props) => {
       </label>
       <span 
         className='toggleSpan'
-        onClick={isChecked}>
+        onClick={() => isChecked}>
           Toggle Switch {isChecked ? 'ON' : 'OFF'} </span>
           {/* checked 여부에 따라 ON, OFF */}
     </div>

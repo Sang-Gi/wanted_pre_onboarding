@@ -3,6 +3,7 @@ import "./App.css";
 import Toggle from "./component/Toggle";
 import Modal from "./component/Modal";
 import Tab from "./component/Tab"
+import Tag from "./component/Tag"
 
 function App() {
   const [value, setValue] = useState(false);
@@ -29,11 +30,13 @@ function App() {
 
       <div className="modal">
         <h2>Modal</h2>
-        <div onClick={handleClickisOpen} className="modalBox">Open Modal</div>
+        <div onClick={() => handleClickisOpen} className="modalBox">Open Modal</div>
         <Modal isOpen={isOpen} isClose={handleClickisClose}/>
       </div>
 
       <Tab />
+
+      <Tag />
     </div>
   );
 }
