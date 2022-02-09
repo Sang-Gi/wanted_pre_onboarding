@@ -47,7 +47,7 @@ $gray: #a8a8a8;
 
     // 체크시 trans
     .toggleCheckbox:checked + .toggleLabel .toggleBall {
-        left: calc(100% - 2px);
+        left: calc(100% - 1.5px);
         transform: translateX(-100%);
     }
     
