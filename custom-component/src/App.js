@@ -30,7 +30,7 @@ function App() {
 
       <div className="modal">
         <h2>Modal</h2>
-        <div onClick={() => handleClickisOpen} className="modalBox">Open Modal</div>
+        <div onClick={handleClickisOpen} className="modalBox">Open Modal</div>
         <Modal isOpen={isOpen} isClose={handleClickisClose}/>
       </div>
 
