@@ -48,7 +48,7 @@ const Tag = (props) => {
                             className='hashtag'
                             key={index}>
                             {hashtag}
-                            <button className='deleteBtn' onClick={deleteTag}>X</button>
+                            <button className='deleteBtn' onClick={() => deleteTag(index)}>X</button>
                         </div>
                     )
                 })}

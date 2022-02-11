@@ -27,11 +27,7 @@ $gray: #495057;
     font-size: 20px;
 }
 
-.tabBox :active {
-    background-color: $gray;
-}
-
-.tabBox:hover {
+.tabBox.click {
     background-color: $gray;
     color: #fff;
 }
