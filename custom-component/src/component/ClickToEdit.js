@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import './css/ClickToEdit.scss';
 
 const ClickToEdit = (props) => {
@@ -10,12 +10,12 @@ const ClickToEdit = (props) => {
 
     const handleNameInput = (e) => {
         setName(e.target.value);
-        console.log(e.target.value);
+        // console.log(e.target.value);
     }
 
     const handleAgeInput = (e) => {
         setAge(e.target.value);
-        console.log(e.target.value);
+        // console.log(e.target.value);    
     }
 
     

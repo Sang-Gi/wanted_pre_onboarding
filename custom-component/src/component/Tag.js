@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './css/Tag.scss'
-// import styled from 'styled-components'
 
 const Tag = (props) => {
     // 기본적으로 해시태그와 같은구조
@@ -19,8 +18,8 @@ const Tag = (props) => {
         setHashtag(''); // 등로 후, 기존 hashtag 삭제
     }
 
-    // input value 입력 후, 엔터누르면 등록 upload
-    const enterPress = e => {
+    // input value 입력 후, 엔터누르면 등록 upload (단, 길이가 0일때는 태그추가 X.)
+    const enterPress = e => { 
         if (e.target.value.length !== 0 && e.key === 'Enter') {
             uploadTag();
         }
@@ -28,12 +27,12 @@ const Tag = (props) => {
 
     // 태그 삭제
     const deleteTag = e => {
-        const deleteTag = e.target.parentElement.innerText[0];
-        // 직접 target에 접근하여 fitler 거친후 새로 배열 만들어 삭제 구현
-        // 버튼의 'X'때문에 obj 접근이 불가해, 한글자만 삭제 가능
+        const deleteTag = e.target.parentElement.innerText;
+        // 직접 target에 접근하여 filter 거친후 새로 배열 만들어 삭제 구현
+        // 버튼의 'X'때문에 obj 접근이 불가해, 한글자만 삭제 가능 -> solved.
         const detletedArr = hashtagArr.filter(hashtag => hashtag !== deleteTag);
         setHashtagArr(detletedArr);
-        // console.log(deleteTag)
+        console.log(deleteTag)
     }
 
 
@@ -48,7 +47,7 @@ const Tag = (props) => {
                             className='hashtag'
                             key={index}>
                             {hashtag}
-                            <button className='deleteBtn' onClick={() => deleteTag(index)}>X</button>
+                            <button className='deleteBtn' onClick={deleteTag}></button>
                         </div>
                     )
                 })}

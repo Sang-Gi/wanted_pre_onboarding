@@ -45,12 +45,45 @@ $gray: #495057;
     align-items: center;
 }
 
-.deleteBtn {
+/* .deleteBtn {
     width: 20px;
     height: 20px;
-    border-radius: 20px;
+    // border-radius: 20px;
     background-color: snow;
     cursor: pointer;
     border: 0;
     margin-left: 3px;
+}
+
+.deleteBtn :before {
+    transform: rotate(45deg);
+}
+.deleteBtn :after {
+    transform: rotate(-45deg);
+}
+
+ */
+
+.deleteBtn {
+	overflow: hidden;
+	position: relative;
+	border: none;
+	padding: 0;
+	width: 2em; 
+    height: 2em;
+	border-radius: 50%;
+	background: transparent;
+	cursor: pointer;
+	
+	&:before, &:after {
+		position: absolute;
+		top: 15%; 
+		width: .125em; 
+        height: 70%;
+		transform: rotate(45deg);
+		background: #fff;
+		content: ''
+	}
+	
+	&:after { transform: rotate(-45deg); }
 }
