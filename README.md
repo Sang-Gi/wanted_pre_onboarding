@@ -1,6 +1,7 @@
 # 원티드 프리온보딩 코스
 
 2022 원티드 프리온보딩 FE코스
+## 배포 링크 : https://agitated-wiles-8bf11b.netlify.app/
 
 ## 프로젝트 실행 전 설치 명령어
 
